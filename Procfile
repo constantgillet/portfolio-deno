@@ -1,1 +1,1 @@
-web: deno run -A --allow-read --allow-net=:${PORT} main.ts --PORT=${PORT}
+web: deno run -A main.ts --PORT=${PORT}
