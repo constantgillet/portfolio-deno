@@ -1,0 +1,83 @@
+@layer base {
+    @font-face {
+        font-family: "IBM Plex Mono";
+        font-weight: normal;
+        src: url("/fonts/IBMPlexMono-Regular.ttf");
+    }
+    @font-face {
+        font-family: "IBM Plex Mono";
+        font-weight: 500;
+        src: url("/fonts/IBMPlexMono-Medium.ttf");
+    }
+}
+
+body {
+    font-family: "IBM Plex Mono", monospace !important;
+    @apply bg-red text-gray-900 dark:bg-black dark:text-gray-100 font-mono;
+    @apply min-h-screen;
+    transition: background-color 0.3s ease-out;
+    background: #ebebeb;
+}
+
+.dark body {
+    background: black;
+}
+
+.post-content h1 {
+    font-size: 1.25rem /* 20px */;
+    line-height: 1.75rem /* 28px */;
+    margin-bottom: 1.2rem /* 24px */;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.post-content h2 {
+    font-size: 1.25rem /* 20px */;
+    margin-top: 1.4rem /* 24px */;
+    margin-bottom: 1.2rem /* 24px */;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem /* 24px */;
+}
+
+.post-content .anchor {
+    margin-right: 8px;
+}
+
+.max-w-fit {
+    max-width: fit-content;
+}
+
+.post-content ul {
+    list-style: circle;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.post-content a:not(.anchor) {
+    padding: 2px 0px 1px;
+    background-image: linear-gradient(
+        transparent 0%,
+        transparent calc(50% - 9px),
+        rgba(0, 255, 0, 0.35) calc(50% - 9px),
+        rgba(0, 255, 0, 0.35) 100%
+    );
+    background-size: 100% 200%;
+    background-position: 0px 0px;
+}
+
+.post-content a:not(.anchor):hover {
+    background-image: linear-gradient(
+        transparent 0%,
+        transparent calc(50% - 9px),
+        rgba(0, 255, 0, 0.55) calc(50% - 9px),
+        rgba(0, 255, 0, 0.55) 100%
+    );
+}
